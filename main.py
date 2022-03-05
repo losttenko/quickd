@@ -28,15 +28,15 @@ def run(playwright: Playwright) -> None:
         page.goto(f"https://eve-wh.space/{jcode}")
 
         effect, whclass = get_hole_data(page)
-        output = create_output(effect, url, whclass)
+        output = create_output(effect, url, whclass, jcode)
         load_clipboard(output)
     # ---------------------
     context.close()
     browser.close()
 
 
-def create_output(effect, url, whclass):
-    output = url + "\n Class: " + whclass + "\n Effect: " + effect
+def create_output(effect, url, whclass, jcode):
+    output = "QUICKD: \n Dscan: " + url + "\n Class: " + whclass + "\n Effect: " + effect + "\n Zkill: " + f"https://zkillboard.com/system/{jcode}/"
     return output
 
 
