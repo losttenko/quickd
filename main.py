@@ -36,7 +36,7 @@ def run(playwright: Playwright) -> None:
 
 
 def create_output(effect, url, whclass, jcode):
-    output = "QUICKD: \n Dscan: " + url + "\n Class: " + whclass + "\n Effect: " + effect + "\n Zkill: " + f"https://zkillboard.com/system/{jcode}/"
+    output = "\n Class: " + whclass + "\n Effect: " + effect + "\n Dscan: " + url + "\n Zkill: " + f"https://zkillboard.com/system/{jcode}/"
     return output
 
 
